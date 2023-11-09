@@ -1,6 +1,11 @@
-import { Router as router } from "express";
+import express from "express";
 import { 
-    imageUpload,
-    videoUpload,
-    imageReduceUpload,
+    
     localFileUpload } from "../controllers/fileController.js";
+
+const router = express.Router();
+
+// api route || hanlder function
+router.post("/localfileupload",localFileUpload);
+
+export default router;
