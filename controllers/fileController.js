@@ -55,7 +55,7 @@ export const imageUpload = async(req,res)=>
         }
 
         // file supported
-        const resp = await  uploadFilestoCloudinary(file,"dev");
+        const resp = await  uploadFilestoCloudinary(file,"dev",90);
         // console.log(resp);
         // database entry
         const fileData =  await fileModel.create({
@@ -99,7 +99,7 @@ export const videoUpload = async(req,res)=>{
         }
 
         // file supported
-        const resp = await  uploadFilestoCloudinary(file,"dev");
+        const resp = await  uploadFilestoCloudinary(file,"dev",90);
         // console.log(resp);
         // database entry
         const fileData =  await fileModel.create({
